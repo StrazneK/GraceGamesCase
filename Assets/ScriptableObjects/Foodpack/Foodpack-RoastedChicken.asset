@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb67390caf0ae4ba94c7cf088bc473, type: 3}
+  m_Name: Foodpack-RoastedChicken
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 3125942162607742413, guid: edbafb31edb0f5f49bfcf355fd76c976, type: 3}
+  image: {fileID: 21300000, guid: 7b3482c03618ddb4688c5e4f5b7831b2, type: 3}
+  title: Foodpack-RoastedChicken

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb67390caf0ae4ba94c7cf088bc473, type: 3}
+  m_Name: Foodpack-Sushi
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 266418674481204795, guid: 27146e5eec0819a4f8e8a4def0f67df8, type: 3}
+  image: {fileID: 21300000, guid: 0f562332e1c59864fac00f61f28734d0, type: 3}
+  title: Foodpack-Sushi
