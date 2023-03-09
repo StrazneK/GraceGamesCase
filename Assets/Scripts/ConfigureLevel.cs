@@ -27,9 +27,6 @@ public class ConfigureLevel : MonoSingleton<ConfigureLevel>
         configLevelDelegate -= ConfigSettings;
         configLevelDelegate -= ConfigLabels;
     }
-    private void Start()
-    {
-    }
     public void ConfigLevel(int _level)
     {
         level = _level;

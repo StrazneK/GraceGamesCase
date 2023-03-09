@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4864803785456124249}
   - component: {fileID: 3928155843186838896}
   - component: {fileID: 4113869469018725986}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foodpack-Sandwich
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRenderer: {fileID: 0}

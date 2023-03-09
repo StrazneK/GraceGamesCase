@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 7065928994945199394}
   - component: {fileID: -3567834183747792843}
   - component: {fileID: -5562968199402531944}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foodpack-Lobster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -188,3 +188,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRenderer: {fileID: 0}

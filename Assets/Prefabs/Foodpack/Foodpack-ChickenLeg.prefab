@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3512125272796514197}
   - component: {fileID: 3937036194104584342}
   - component: {fileID: 7422738848921296398}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foodpack-ChickenLeg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -143,3 +143,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRenderer: {fileID: 0}

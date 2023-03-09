@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1988642187018766537}
   - component: {fileID: 1650868624612007546}
   - component: {fileID: -31770198934692759}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foodpack-CupCake
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -142,3 +142,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRenderer: {fileID: 0}

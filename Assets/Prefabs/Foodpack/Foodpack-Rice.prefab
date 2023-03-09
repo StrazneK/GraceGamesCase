@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2410644370316640914}
   - component: {fileID: -1773650778261021457}
   - component: {fileID: 8715970358356676391}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foodpack-Rice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,3 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRenderer: {fileID: 0}

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6233202544451605790}
   - component: {fileID: 1268703417790705583}
   - component: {fileID: 26231224867922674}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foodpack-IceCreamStick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,3 +141,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mRenderer: {fileID: 0}
