@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 1868577296565984970}
   - component: {fileID: 5391385232557941299}
   - component: {fileID: 3363406230905500621}
+  - component: {fileID: -4477407388334864065}
+  - component: {fileID: -6012161728009512959}
   m_Layer: 0
   m_Name: Foodpack-FrenchFries
   m_TagString: Untagged
@@ -97,3 +99,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6798287, y: 0.79573953, z: 0.57100946}
   m_Center: {x: 0.0075396, y: -0.07604772, z: -0.08588514}
+--- !u!54 &-4477407388334864065
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975953729691916015}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-6012161728009512959
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5975953729691916015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

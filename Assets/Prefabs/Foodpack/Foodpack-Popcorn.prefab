@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 5701855600068791381}
   - component: {fileID: 7240421750994038180}
   - component: {fileID: 6976134501063865868}
+  - component: {fileID: -2992327757237478769}
+  - component: {fileID: -683745472957290824}
   m_Layer: 0
   m_Name: Foodpack-Popcorn
   m_TagString: Untagged
@@ -111,3 +113,31 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.4883327, y: 0.21083581, z: 0.48885757}
   m_Center: {x: 0.0039359108, y: 0.39218253, z: 0.0043827742}
+--- !u!54 &-2992327757237478769
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277412572949788809}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-683745472957290824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6277412572949788809}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

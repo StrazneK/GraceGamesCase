@@ -16,6 +16,8 @@ GameObject:
   - component: {fileID: 2713404739176756236}
   - component: {fileID: 7380082449644729070}
   - component: {fileID: 7065928994945199394}
+  - component: {fileID: -3567834183747792843}
+  - component: {fileID: -5562968199402531944}
   m_Layer: 0
   m_Name: Foodpack-Lobster
   m_TagString: Untagged
@@ -158,3 +160,31 @@ CapsuleCollider:
   m_Height: 0.6548226
   m_Direction: 1
   m_Center: {x: 0.22858316, y: 0.12538064, z: -0.10864505}
+--- !u!54 &-3567834183747792843
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554768718639294241}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &-5562968199402531944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5554768718639294241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

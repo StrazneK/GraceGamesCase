@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 4533609407194322913}
   - component: {fileID: 7914536309184801560}
   - component: {fileID: -5261292503056013969}
+  - component: {fileID: -5092586874469635193}
+  - component: {fileID: 1559167762513237924}
   m_Layer: 0
   m_Name: Foodpack-Pretzel
   m_TagString: Untagged
@@ -97,4 +99,32 @@ MeshCollider:
   serializedVersion: 4
   m_Convex: 1
   m_CookingOptions: 30
-  m_Mesh: {fileID: 3223935233344204881, guid: 0200014de4dd86246b698247f586bf3d, type: 3}
+  m_Mesh: {fileID: 550652653928734256, guid: b2fdaff81b9dfb24182ddd5f762d4a8b, type: 3}
+--- !u!54 &-5092586874469635193
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496817895583915972}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!114 &1559167762513237924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8496817895583915972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2fdfb71fa03ee6409df1a48f251dd11, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
