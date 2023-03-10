@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 6652435901675633440}
   - component: {fileID: 7963716208589547355}
   - component: {fileID: 8920313736696853261}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -87,7 +87,7 @@ GameObject:
   - component: {fileID: 3782150333448797684}
   - component: {fileID: 3782150333448797690}
   - component: {fileID: 3782150333448797691}
-  m_Layer: 5
+  m_Layer: 7
   m_Name: TxtQuantity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -220,7 +220,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3782150334342965840}
-  m_Layer: 5
+  - component: {fileID: 8352326004622838258}
+  m_Layer: 7
   m_Name: Booster
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -249,3 +250,29 @@ RectTransform:
   m_AnchoredPosition: {x: -349, y: 47}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!61 &8352326004622838258
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3782150334342965841}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 120, y: 120}
+  m_EdgeRadius: 0
