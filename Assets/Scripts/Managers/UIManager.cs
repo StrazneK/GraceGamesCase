@@ -9,8 +9,16 @@ namespace Managers
     {
         public TextMeshProUGUI txtLevel;
         public TextMeshProUGUI txtTime;
-        public Transform winPanel;
-        public Transform losePanel;
+        public GameObject winPanel;
+        public GameObject losePanel;
 
+        public void OpenWinPanel()
+        {
+            winPanel.SetActive(true);
+        }
+        public void OpenLosePanel()
+        {
+            losePanel.SetActive(true);
+        }
     }
 }

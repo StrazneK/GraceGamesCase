@@ -1,15 +1,21 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
-
+using UnityEngine;
 
 namespace Managers
 {
     public enum GameEvent
     {
         OnBoostFreeze,
-        OnBoostTime
-    }
+        OnBoostTime,
+        OnBoostLightning,
+        OnBoostMagnet,
 
+        OnMoveAnimationEnd,
+        OnMatch
+    }
+    
     public static class EventManager
     {
         private static Dictionary<GameEvent, Action> eventTable
@@ -31,6 +37,12 @@ namespace Managers
 
         public static void Broadcast(GameEvent gameEvent)
         {
+            if (eventTable[gameEvent] != null)
+                eventTable[gameEvent]();
+        }
+        public static IEnumerator BroadcastWithSec(GameEvent gameEvent,float sec)
+        {
+            yield return new WaitForSeconds(sec);
             if (eventTable[gameEvent] != null)
                 eventTable[gameEvent]();
         }

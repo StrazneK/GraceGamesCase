@@ -8,6 +8,7 @@ namespace ScriptableObjects
     public class LevelSO : ScriptableObject
     {
         [SerializeField] const bool randomObjs = true;
+        public int requiredFoodpackCount = 1;
         public int difficulty = 1;
         public float time = 100;
     }

@@ -10,33 +10,33 @@ namespace Foodpack
     {
         const float MAX_Z = 2f;
         const float MAX_X = 2f;
-        public void SpawnObjs(List<FoodpackSO> requiredFoodpacks)
+        List<GameObject> spawnedRequiredFp = new List<GameObject>();
+        List<GameObject> spawnedOtherFp = new List<GameObject>();
+        public void SpawnObjs(List<FoodpackSO> foodpacks,bool isRequired)
         {
-            for (int i = 0; i < requiredFoodpacks.Count; i++)
+            for (int i = 0; i < foodpacks.Count; i++)
             {
-                SpawnMultiple(requiredFoodpacks[i].prefab);
+                SpawnMultiple(foodpacks[i], isRequired);
             }
         }
-        public void SpawnObjs(int foodpackCount)
-        {
-            for (int i = 0; i < foodpackCount; i++)
-            {
-                SpawnMultiple(PoolManager.Instance.GetFoodpackPref());
-            }
-        }
-        void SpawnMultiple(GameObject pref)
+        void SpawnMultiple(FoodpackSO foodpackSO, bool isRequired)
         {
             for (int j = 0; j < 3; j++)
             {
-               InstantiateObj(pref);
+                InstantiateObj(foodpackSO, isRequired);
 
             }
         }
-        public void InstantiateObj(GameObject prefab)
+        public void InstantiateObj(FoodpackSO foodpackSO, bool isRequired)
         {
             Vector3 randomPosition = new Vector3(Random.Range(-MAX_X, MAX_X), 2, Random.Range(-MAX_Z, MAX_Z));
             Quaternion randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
-            Instantiate(prefab, randomPosition, randomRotation, transform);
+            GameObject newObj = Instantiate(foodpackSO.prefab, randomPosition, randomRotation, transform);
+            newObj.GetComponent<FoodpackObj>().foodpackSO = foodpackSO;
+            if (isRequired)
+                spawnedRequiredFp.Add(newObj);
+            else
+                spawnedOtherFp.Add(newObj);
         }
     }
 }
