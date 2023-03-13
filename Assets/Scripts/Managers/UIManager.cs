@@ -11,7 +11,16 @@ namespace Managers
         public TextMeshProUGUI txtTime;
         public GameObject winPanel;
         public GameObject losePanel;
-
+        private void OnEnable()
+        {
+            EventManager.AddHandler(GameEvent.OnGameWin, OpenWinPanel);
+            EventManager.AddHandler(GameEvent.OnGameLose, OpenLosePanel);
+        }
+        private void OnDisable()
+        {
+            EventManager.RemoveHandler(GameEvent.OnGameWin, OpenWinPanel);
+            EventManager.RemoveHandler(GameEvent.OnGameLose, OpenLosePanel);
+        }
         public void OpenWinPanel()
         {
             winPanel.SetActive(true);

@@ -32,6 +32,7 @@ public class CollectionController : MonoSingleton<CollectionController>
 
         SortCollectedObjs();
         ControlMatch();
+        LoseControl();
     }
 
     void SortCollectedObjs()
@@ -73,6 +74,10 @@ public class CollectionController : MonoSingleton<CollectionController>
     {
         collectedObjs.Remove(lastFpSO);
     }
-
+    void LoseControl()
+    {
+        if (collectedObjs.Count >= 7)
+            EventManager.Broadcast(GameEvent.OnGameLose);
+    }
 
 }

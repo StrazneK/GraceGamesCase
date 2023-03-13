@@ -13,7 +13,10 @@ namespace Managers
         OnBoostMagnet,
 
         OnMoveAnimationEnd,
-        OnMatch
+        OnMatch,
+
+        OnGameLose,
+        OnGameWin
     }
     
     public static class EventManager
