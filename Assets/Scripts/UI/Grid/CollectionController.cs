@@ -33,11 +33,12 @@ public class CollectionController : MonoSingleton<CollectionController>
         SortCollectedObjs();
         ControlMatch();
         LoseControl();
+        CardsPool.Instance.CollectRequiredFp(foodpackSO);
     }
 
     void SortCollectedObjs()
     {
-        ColumnsPool.Instance.ClearColumns();
+        ColumnsPool.Instance.ClearUIs();
         FoodpackSO[] tempList; //Create temp list for perfectly sort
         tempList = collectedObjs.ToArray(); //Copy original list
         if (lastSameIndex != -1) //If last added obj already exists
@@ -49,7 +50,7 @@ public class CollectionController : MonoSingleton<CollectionController>
             }
         }
         lastSameIndex = -1;
-        ColumnsPool.Instance.FillColumns(collectedObjs);
+        ColumnsPool.Instance.FillUIs(collectedObjs);
     }
 
     public void ControlMatch()

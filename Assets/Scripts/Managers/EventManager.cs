@@ -7,16 +7,18 @@ namespace Managers
 {
     public enum GameEvent
     {
+        OnGameStart,
+        OnGameLose,
+        OnGameWin,
+
         OnBoostFreeze,
         OnBoostTime,
         OnBoostLightning,
         OnBoostMagnet,
 
         OnMoveAnimationEnd,
-        OnMatch,
+        OnMatch
 
-        OnGameLose,
-        OnGameWin
     }
     
     public static class EventManager

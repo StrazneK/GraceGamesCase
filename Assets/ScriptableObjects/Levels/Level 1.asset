@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Level 1
   m_EditorClassIdentifier: 
   requiredFoodpackCount: 2
-  difficulty: 1
+  difficulty: 4
   time: 100

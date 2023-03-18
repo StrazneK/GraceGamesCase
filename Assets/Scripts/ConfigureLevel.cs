@@ -10,9 +10,6 @@ using System;
 public class ConfigureLevel : MonoSingleton<ConfigureLevel>
 {
     #region Level
-    delegate void ConfigLevelDelegate();
-    ConfigLevelDelegate configLevelDelegate;
-
     LevelSO selectedLvlSO;
     int level;
     #endregion
@@ -22,20 +19,23 @@ public class ConfigureLevel : MonoSingleton<ConfigureLevel>
 
     private void OnEnable()
     {
-        configLevelDelegate += ConfigSettings;
-        configLevelDelegate += ConfigLabels;
+        EventManager.AddHandler(GameEvent.OnGameStart, ConfigLabels);
+        EventManager.AddHandler(GameEvent.OnGameStart, SpawnObjects);
+        EventManager.AddHandler(GameEvent.OnGameStart, FillRequirementCards);
+
+        //  configLevelDelegate += ConfigLabels;
     }
     private void OnDisable()
     {
-        configLevelDelegate -= ConfigSettings;
-        configLevelDelegate -= ConfigLabels;
+        EventManager.RemoveHandler(GameEvent.OnGameStart, ConfigLabels);
+        EventManager.RemoveHandler(GameEvent.OnGameStart, SpawnObjects);
+        EventManager.RemoveHandler(GameEvent.OnGameStart, FillRequirementCards);
     }
     public void ConfigLevel(int _level)
     {
         level = _level;
         SelectLevelSO();
-        if (configLevelDelegate != null)
-            configLevelDelegate();
+        ConfigSettings();
     }
     void ConfigSettings()
     {
@@ -47,8 +47,10 @@ public class ConfigureLevel : MonoSingleton<ConfigureLevel>
         {
             otherFoodpacks.Add(PoolManager.Instance.GetFoodpack());
         }
-        SpawnObjects();
+        //SpawnObjects();
+        EventManager.Broadcast(GameEvent.OnGameStart);
     }
+    #region OnGameStart
     void ConfigLabels()
     {
         UIManager.Instance.txtLevel.text = "Level " + level.ToString();
@@ -59,4 +61,6 @@ public class ConfigureLevel : MonoSingleton<ConfigureLevel>
         SpawnFoodpackObj.Instance.SpawnObjs(requiredFoodpacks, true);
         SpawnFoodpackObj.Instance.SpawnObjs(otherFoodpacks, false);
     }
+    void FillRequirementCards() => CardsPool.Instance.FillRequirements(requiredFoodpacks);
+    #endregion
 }
