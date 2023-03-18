@@ -7,6 +7,6 @@ public class NextButton : MonoBehaviour, IPointerDownHandler
 {
     public void OnPointerDown(PointerEventData eventData)
     {
-        Managers.LevelManager.Instance.MainMenu();
+        Managers.SceneChangeManager.ChangeScene(true);
     }
 }
