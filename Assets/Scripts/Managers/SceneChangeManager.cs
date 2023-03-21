@@ -9,7 +9,7 @@ namespace Managers
     {
         public static void ChangeScene(bool isMain)
         {
-            SceneManager.LoadScene(isMain ? "main" : "game");
+            SceneManager.LoadScene(isMain ? "Main" : "Game");
         }
     }
 }

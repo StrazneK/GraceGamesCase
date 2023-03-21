@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using ScriptableObjects;
-using UnityEngine.SceneManagement;
 
 namespace Managers
 {
@@ -23,10 +22,6 @@ namespace Managers
         {
             level++;
             PlayerPrefs.SetInt("Level", level);
-        }
-        public void MainMenu()
-        {
-            SceneManager.LoadScene("main");
         }
     }
 }
