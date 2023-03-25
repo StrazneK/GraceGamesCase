@@ -643,6 +643,7 @@ GameObject:
   - component: {fileID: 666133300}
   - component: {fileID: 666133302}
   - component: {fileID: 666133301}
+  - component: {fileID: 666133303}
   m_Layer: 5
   m_Name: CoinPanel
   m_TagString: Untagged
@@ -710,6 +711,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666133299}
   m_CullTransparentMesh: 1
+--- !u!114 &666133303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666133299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14828f6915e387745a838e034d47088f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtCount: {fileID: 2035837653}
 --- !u!1 &706652597
 GameObject:
   m_ObjectHideFlags: 0

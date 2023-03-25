@@ -22,7 +22,6 @@ public abstract class RequiredAmount: MonoBehaviour
     public void AddRequiredAmount(int amount) => reqAmount += amount;
     public void DecreaseRequiredAmount(int amount = 1)
     {
-        Debug.Log("Azaldý");
         reqAmount-=amount;
         if (ControlRequiredAmount())
             RequiredAmountFinished();

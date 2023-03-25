@@ -24,6 +24,8 @@ public class CardsPool : PoolControl<CardsPool>
     {
         requiredFoodpacks.Remove(foodpackSO);
         if (requiredFoodpacks.Count <= 0)
+        {
             EventManager.Broadcast(GameEvent.OnGameWin);
+        }
     }
 }

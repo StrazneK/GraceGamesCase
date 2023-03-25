@@ -1,3 +1,4 @@
+using Managers;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -8,6 +9,7 @@ public class HeartSystem  : CountSystemBase
     public static HeartSystem Instance;
     [SerializeField] TextMeshProUGUI txtCount;
     void ShowOnText() => txtCount.text = Count.ToString();
+
     void Awake()
     {
         Instance = this;
@@ -19,10 +21,21 @@ public class HeartSystem  : CountSystemBase
         base.Start();
         ShowOnText();
     }
-
+    private void OnEnable()
+    {
+        EventManager.AddHandler(GameEvent.OnGameLose, RemoveOneHeart);
+    }
+    private void OnDisable()
+    {
+        EventManager.RemoveHandler(GameEvent.OnGameLose, RemoveOneHeart);
+    }
     public override void CountChanged()
     {
-        Debug.Log("Heart Count Changed");
         ShowOnText();
+    }
+    public void RemoveOneHeart()
+    {
+        RemoveCount(1);
+        SaveCount();
     }
 }
