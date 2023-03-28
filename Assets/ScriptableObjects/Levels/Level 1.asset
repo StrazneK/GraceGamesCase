@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fbd4dc3e26d6e534d84528ef25d3dc6b, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  requiredFoodpackCount: 2
-  difficulty: 4
+  requiredFoodpackCount: 1
+  difficulty: 1
   time: 100

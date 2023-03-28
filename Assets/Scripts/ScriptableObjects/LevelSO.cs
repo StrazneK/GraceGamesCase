@@ -9,7 +9,7 @@ namespace ScriptableObjects
     {
         [SerializeField] const bool randomObjs = true;
         public int requiredFoodpackCount = 1;
-        public int difficulty = 1;
+        public int difficulty = 1; //NonRequery object count
         public float time = 100;
     }
 }

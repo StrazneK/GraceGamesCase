@@ -1,3 +1,4 @@
+using Other;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -45,7 +46,7 @@ namespace Managers
             {
                 GameManager.Instance.ChangeGameState(false);
                 txtTime.text = "00:00";
-                //Yenilme kodlarý
+                EventManager.Broadcast(GameEvent.OnGameLose);
             }
         }
         string SecondsToMinutes()

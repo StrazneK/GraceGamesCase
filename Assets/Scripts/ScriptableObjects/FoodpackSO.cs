@@ -7,9 +7,9 @@ namespace ScriptableObjects
     [CreateAssetMenu(menuName ="ScriptableObjects/FoodpackSO")]
     public class FoodpackSO : ScriptableObject
     {
-        public GameObject prefab;
-        public Sprite image;
-        public string title;
+        public GameObject prefab; 
+        public Sprite image; 
+        public string title; 
         private void OnValidate()
         {
             if (prefab != null)

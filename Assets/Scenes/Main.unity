@@ -135,8 +135,10 @@ GameObject:
   - component: {fileID: 128753191}
   - component: {fileID: 128753190}
   - component: {fileID: 128753189}
+  - component: {fileID: 128753194}
+  - component: {fileID: 128753193}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CanvasMain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -224,6 +226,32 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &128753193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128753188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14828f6915e387745a838e034d47088f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtCount: {fileID: 2035837653}
+--- !u!114 &128753194
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 128753188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2f842e4ec637fe439a8d85028c506b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtCount: {fileID: 1958845914}
 --- !u!1 &152405162
 GameObject:
   m_ObjectHideFlags: 0
@@ -643,7 +671,6 @@ GameObject:
   - component: {fileID: 666133300}
   - component: {fileID: 666133302}
   - component: {fileID: 666133301}
-  - component: {fileID: 666133303}
   m_Layer: 5
   m_Name: CoinPanel
   m_TagString: Untagged
@@ -711,19 +738,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 666133299}
   m_CullTransparentMesh: 1
---- !u!114 &666133303
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 666133299}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14828f6915e387745a838e034d47088f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txtCount: {fileID: 2035837653}
 --- !u!1 &706652597
 GameObject:
   m_ObjectHideFlags: 0
@@ -851,7 +865,6 @@ GameObject:
   - component: {fileID: 959263560}
   - component: {fileID: 959263562}
   - component: {fileID: 959263561}
-  - component: {fileID: 959263563}
   m_Layer: 5
   m_Name: HeartPanel
   m_TagString: Untagged
@@ -919,19 +932,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 959263559}
   m_CullTransparentMesh: 1
---- !u!114 &959263563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959263559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2f842e4ec637fe439a8d85028c506b5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txtCount: {fileID: 1958845914}
 --- !u!1 &1044883072
 GameObject:
   m_ObjectHideFlags: 0

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class NextButton : MonoBehaviour, IPointerDownHandler
+namespace UI.Buttons
 {
-    public void OnPointerDown(PointerEventData eventData)
+    public class NextButton : MonoBehaviour, IPointerDownHandler
     {
-        Managers.SceneChangeManager.ChangeScene(true);
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            Managers.SceneChangeManager.ChangeScene(true);
+        }
     }
 }

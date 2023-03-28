@@ -3,12 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(FillFoodpackUI))]
-public class Card : RequiredAmount
+namespace UI.Cards
 {
-    public bool isEnabled = false;
-    public override void RequiredAmountFinished()
+    [RequireComponent(typeof(FillFoodpackUI))]
+    public class Card : RequiredAmount
     {
-        CardsPool.Instance.RemoveFromList(GetComponent<FillFoodpackUI>().foodpackSO);
+        public bool isEnabled = false;
+        public override void RequiredAmountFinished()
+        {
+            CardsPool.Instance.RemoveFromList(GetComponent<FillFoodpackUI>().foodpackSO);
+        }
     }
 }

@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using Managers;
+using UI.Boosts;
 
-public class TimeBoost : BoostClick
+namespace UI.Boosts
 {
-    public override void StartBoost()
+    public class TimeBoost : BoostClick
     {
-        EventManager.Broadcast(GameEvent.OnBoostTime);
+        public override void StartBoost()
+        {
+            EventManager.Broadcast(GameEvent.OnBoostTime);
+        }
     }
 }

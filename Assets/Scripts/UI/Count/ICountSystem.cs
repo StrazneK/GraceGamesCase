@@ -1,7 +1,10 @@
-﻿public interface ICountSystem
+﻿namespace UI.Count
 {
-    int Count { get; }
-    void AddCount(int addedCount);
-    void RemoveCount(int removedCount);
-    void SaveCount();
+    public interface ICountSystem
+    {
+        int Count { get; }
+        void AddCount(int addedCount);
+        void RemoveCount(int removedCount);
+        void SaveCount();
+    }
 }

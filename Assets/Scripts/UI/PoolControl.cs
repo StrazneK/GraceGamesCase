@@ -3,35 +3,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using Other;
 
-public class PoolControl<T> : MonoSingleton<T> where T: PoolControl<T>
+namespace UI
 {
-    public List<FillFoodpackUI> foodpackUIs = new List<FillFoodpackUI>();
-    void Start()
+    public class PoolControl<T> : MonoSingleton<T> where T : PoolControl<T>
     {
-        for (int i = 0; i < transform.childCount; i++)
+        public List<FillFoodpackUI> foodpackUIs = new List<FillFoodpackUI>();
+        void Start()
         {
-            foodpackUIs.Add(transform.GetChild(i).GetComponent<FillFoodpackUI>());
+            FillFoodpacksUIsList();
         }
-    }
-
-    public void FillUIs(List<FoodpackSO> collectedObjs)
-    {
-        for (int i = 0; i < collectedObjs.Count; i++)
+        void FillFoodpacksUIsList()
         {
-            foodpackUIs[i].FillContent(collectedObjs[i]);
+            for (int i = 0; i < transform.childCount; i++)
+            {
+                foodpackUIs.Add(transform.GetChild(i).GetComponent<FillFoodpackUI>());
+            }
         }
-    }
-    public GameObject FoundUI(FoodpackSO foodpackSO)
-    {
-        return foodpackUIs.Where(x => x.foodpackSO == foodpackSO).FirstOrDefault().gameObject;
-    }
-    public void ClearUIs()
-    {
-        for (int i = 0; i < foodpackUIs.Count; i++)
+        public void FillUIs(List<FoodpackSO> collectedObjs)
         {
-            foodpackUIs[i].RemoveContent();
-            foodpackUIs[i].gameObject.SetActive(false);
+            if (foodpackUIs.Count <= 0)
+                FillFoodpacksUIsList();
+            for (int i = 0; i < collectedObjs.Count; i++)
+            {
+                foodpackUIs[i].FillContent(collectedObjs[i]);
+            }
+        }
+        public GameObject FoundUI(FoodpackSO foodpackSO)
+        {
+            return foodpackUIs.Where(x => x.foodpackSO == foodpackSO).FirstOrDefault().gameObject;
+        }
+        public void ClearUIs()
+        {
+            for (int i = 0; i < foodpackUIs.Count; i++)
+            {
+                foodpackUIs[i].RemoveContent();
+                foodpackUIs[i].gameObject.SetActive(false);
+            }
         }
     }
 }

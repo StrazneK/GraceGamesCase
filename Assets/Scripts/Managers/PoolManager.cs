@@ -1,3 +1,4 @@
+using Other;
 using ScriptableObjects;
 using System.Collections;
 using System.Collections.Generic;

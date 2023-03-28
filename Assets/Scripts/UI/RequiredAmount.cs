@@ -3,36 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public abstract class RequiredAmount: MonoBehaviour
+namespace UI
 {
-    public TextMeshProUGUI txtAmount;
-    public int _reqAmount;
-    public int reqAmount 
+    public abstract class RequiredAmount : MonoBehaviour
     {
-        get
+        public TextMeshProUGUI txtAmount;
+        public int _reqAmount;
+        public int reqAmount
         {
-            return _reqAmount;
-        } 
-        set
-        {
-            _reqAmount = value;
-            txtAmount.text = value.ToString();
+            get
+            {
+                return _reqAmount;
+            }
+            set
+            {
+                _reqAmount = value;
+                txtAmount.text = value.ToString();
+            }
         }
-    }
-    public void AddRequiredAmount(int amount) => reqAmount += amount;
-    public void DecreaseRequiredAmount(int amount = 1)
-    {
-        reqAmount-=amount;
-        if (ControlRequiredAmount())
-            RequiredAmountFinished();
-    }
-    public bool ControlRequiredAmount()
-    {
-        if (reqAmount <= 0)
+        public void AddRequiredAmount(int amount) => reqAmount += amount;
+        public void DecreaseRequiredAmount(int amount = 1)
         {
-            return true;
+            reqAmount -= amount;
+            if (ControlRequiredAmount())
+                RequiredAmountFinished();
         }
-        return false;
+        public bool ControlRequiredAmount()
+        {
+            if (reqAmount <= 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        public abstract void RequiredAmountFinished();
     }
-    public abstract void RequiredAmountFinished();
 }

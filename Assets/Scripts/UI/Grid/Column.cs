@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Column : FillFoodpackUI
+namespace UI.Grid
 {
+    public class Column : FillFoodpackUI
+    {
+    }
 }

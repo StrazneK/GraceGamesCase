@@ -1,34 +1,38 @@
+using UI.Cards;
 using ScriptableObjects;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class FillFoodpackUI : MonoBehaviour
+namespace UI
 {
-    [SerializeField] Image image;
-    FoodpackSO _foodpackSO;
-    public FoodpackSO foodpackSO
+    public class FillFoodpackUI : MonoBehaviour
     {
-        get
+        [SerializeField] Image image;
+        FoodpackSO _foodpackSO;
+        public FoodpackSO foodpackSO
         {
-            return _foodpackSO;
+            get
+            {
+                return _foodpackSO;
+            }
+            set
+            {
+                image.sprite = value.image;
+                _foodpackSO = value;
+            }
         }
-        set
+        public void FillContent(FoodpackSO _fpSo)
         {
-            image.sprite = value.image;
-            _foodpackSO = value;
+            gameObject.SetActive(true);
+            foodpackSO = _fpSo;
+            if (transform.GetComponent<Card>() != null)
+                transform.GetComponent<Card>().AddRequiredAmount(3);
         }
-    }
-    public void FillContent(FoodpackSO _fpSo)
-    {
-        gameObject.SetActive(true);
-        foodpackSO = _fpSo;
-        if (transform.GetComponent<Card>() != null)
-            transform.GetComponent<Card>().AddRequiredAmount(3);
-    }
-    public void RemoveContent()
-    {
-        gameObject.SetActive(false);
+        public void RemoveContent()
+        {
+            gameObject.SetActive(false);
+        }
     }
 }

@@ -2,40 +2,42 @@
 using TMPro;
 using UnityEngine;
 
-public class CoinSystem : CountSystemBase
+namespace UI.Count
 {
-    public static CoinSystem Instance;
-    [SerializeField] TextMeshProUGUI txtCount;
-    void ShowOnText() => txtCount.text = Count.ToString();
-    void Awake()
+    public class CoinSystem : CountSystemBase
     {
-        Instance = this;
-        key = "Coin";
-    }
-    private void OnEnable()
-    {
-        EventManager.AddHandler(GameEvent.OnMatch, AddTenCoin);
-    }
-    private void OnDisable()
-    {
-        EventManager.RemoveHandler(GameEvent.OnMatch, AddTenCoin);
-    }
+        public static CoinSystem Instance;
+        [SerializeField] TextMeshProUGUI txtCount;
+        void ShowOnText() => txtCount.text = Count.ToString();
+        void Awake()
+        {
+            Instance = this;
+            key = "Coin";
+        }
+        private void OnEnable()
+        {
+            EventManager.AddHandler(GameEvent.OnMatch, AddTenCoin);
+        }
+        private void OnDisable()
+        {
+            EventManager.RemoveHandler(GameEvent.OnMatch, AddTenCoin);
+        }
 
-    override protected void Start()
-    {
-        base.Start();
-        ShowOnText();
-    }
+        override protected void Start()
+        {
+            base.Start();
+            ShowOnText();
+        }
 
-    public override void CountChanged()
-    {
-        Debug.Log("Coin Count Changed");
-        ShowOnText();
-    }
+        public override void CountChanged()
+        {
+            ShowOnText();
+        }
 
-    public void AddTenCoin()
-    {
-        AddCount(10);
-        SaveCount();
+        public void AddTenCoin()
+        {
+            AddCount(10);
+            SaveCount();
+        }
     }
 }

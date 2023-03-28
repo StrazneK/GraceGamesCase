@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6cb67390caf0ae4ba94c7cf088bc473, type: 3}
+  m_Name: Foodpack-ChickenLeg
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 5082093098658960150, guid: a1c6ca4dc2705524c86b82fe1078149d, type: 3}
+  image: {fileID: 21300000, guid: 4b9c03ab5c76fae47af0f6d9fee94dfe, type: 3}
+  title: Foodpack-ChickenLeg

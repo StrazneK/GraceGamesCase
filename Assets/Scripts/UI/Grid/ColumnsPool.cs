@@ -4,25 +4,28 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ColumnsPool : PoolControl<ColumnsPool>
+namespace UI.Grid
 {
-    public Vector3 GetNextColumnPos()
+    public class ColumnsPool : PoolControl<ColumnsPool>
     {
-        int targetIndex = CollectionController.Instance.lastIndex + 1;
-        Vector3 columnPos = foodpackUIs[targetIndex].transform.position;
-        Vector3 screenPos = columnPos;
-        Vector3 worldPos=Vector3.zero;
-        Ray ray = Camera.main.ScreenPointToRay(screenPos);
-
-        if (Physics.Raycast(ray, out RaycastHit hitData))
+        public Vector3 GetNextColumnPos()
         {
-            worldPos = hitData.point;
+            int targetIndex = CollectionController.Instance.lastIndex + 1;
+            Vector3 columnPos = foodpackUIs[targetIndex].transform.position;
+            Vector3 screenPos = columnPos;
+            Vector3 worldPos = Vector3.zero;
+            Ray ray = Camera.main.ScreenPointToRay(screenPos);
+
+            if (Physics.Raycast(ray, out RaycastHit hitData))
+            {
+                worldPos = hitData.point;
+            }
+
+            return worldPos;
         }
-        
-        return worldPos;
-    }
-    public void MatchedColumns(int columnIndex)
-    {
+        public void MatchedColumns(int columnIndex)
+        {
             FoodpackAnimation.Instance.UIMatchAnimation(foodpackUIs[columnIndex].transform);
+        }
     }
 }

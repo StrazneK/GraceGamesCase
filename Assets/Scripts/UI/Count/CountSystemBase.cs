@@ -1,31 +1,34 @@
 ﻿using TMPro;
 using UnityEngine;
 
-public abstract class CountSystemBase : MonoBehaviour, ICountSystem
+namespace UI.Count
 {
-    protected int count;
-    protected string key;
-
-    public int Count => count;
-
-    public void AddCount(int addedCount)
-    { 
-        count += addedCount;
-        CountChanged();
-    }
-
-    public void RemoveCount(int removedCount)
+    public abstract class CountSystemBase : MonoBehaviour, ICountSystem
     {
-        count -= removedCount;
-        CountChanged();
-    }
+        protected int count;
+        protected string key;
 
-    public void SaveCount() => PlayerPrefs.SetInt(key, count);
+        public int Count => count;
 
-    protected virtual void Start()
-    {
-        count = PlayerPrefs.GetInt(key, 100);
+        public void AddCount(int addedCount)
+        {
+            count += addedCount;
+            CountChanged();
+        }
+
+        public void RemoveCount(int removedCount)
+        {
+            count -= removedCount;
+            CountChanged();
+        }
+
+        public void SaveCount() => PlayerPrefs.SetInt(key, count);
+
+        protected virtual void Start()
+        {
+            count = PlayerPrefs.GetInt(key, 100);
+        }
+        public abstract void CountChanged();
+
     }
-    public abstract void CountChanged();
-    
 }

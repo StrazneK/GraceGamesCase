@@ -2,12 +2,14 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-
-public abstract class BoostClick : MonoBehaviour, IPointerDownHandler
+namespace UI.Boosts
 {
-    public void OnPointerDown(PointerEventData eventData)
+    public abstract class BoostClick : MonoBehaviour, IPointerDownHandler
     {
-        StartBoost();
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            StartBoost();
+        }
+        public abstract void StartBoost();
     }
-    public abstract void StartBoost();
 }

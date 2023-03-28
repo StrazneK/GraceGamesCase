@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Managers;
+using Other;
 
 namespace Foodpack
 {
@@ -24,7 +25,6 @@ namespace Foodpack
             for (int j = 0; j < 3; j++)
             {
                 InstantiateObj(foodpackSO, isRequired);
-
             }
         }
         public void InstantiateObj(FoodpackSO foodpackSO, bool isRequired)

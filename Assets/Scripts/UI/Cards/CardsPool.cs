@@ -5,27 +5,30 @@ using UnityEngine;
 using System.Linq;
 using Managers;
 
-public class CardsPool : PoolControl<CardsPool>
+namespace UI.Cards
 {
-    public List<FoodpackSO> requiredFoodpacks = new List<FoodpackSO>();
-    public void FillRequirements(List<FoodpackSO> _requiredFoodpacks)
+    public class CardsPool : PoolControl<CardsPool>
     {
-        requiredFoodpacks = _requiredFoodpacks;
-        FillUIs(requiredFoodpacks);
-    }
-    public void CollectRequiredFp(FoodpackSO foodpackSO)
-    {
-        if (requiredFoodpacks.Contains(foodpackSO))
+        public List<FoodpackSO> requiredFoodpacks = new List<FoodpackSO>();
+        public void FillRequirements(List<FoodpackSO> _requiredFoodpacks)
         {
-            FoundUI(foodpackSO).GetComponent<RequiredAmount>().DecreaseRequiredAmount();
+            requiredFoodpacks = _requiredFoodpacks;
+            FillUIs(requiredFoodpacks);
         }
-    }
-    public void RemoveFromList(FoodpackSO foodpackSO)
-    {
-        requiredFoodpacks.Remove(foodpackSO);
-        if (requiredFoodpacks.Count <= 0)
+        public void CollectRequiredFp(FoodpackSO foodpackSO)
         {
-            EventManager.Broadcast(GameEvent.OnGameWin);
+            if (requiredFoodpacks.Contains(foodpackSO))
+            {
+                FoundUI(foodpackSO).GetComponent<RequiredAmount>().DecreaseRequiredAmount();
+            }
+        }
+        public void RemoveFromList(FoodpackSO foodpackSO)
+        {
+            requiredFoodpacks.Remove(foodpackSO);
+            if (requiredFoodpacks.Count <= 0)
+            {
+                EventManager.Broadcast(GameEvent.OnGameWin);
+            }
         }
     }
 }

@@ -15,7 +15,7 @@ namespace Foodpack
         {
             mRenderer = GetComponent<MeshRenderer>();
         }
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerDown(PointerEventData eventData) //Give yellow outline and enlarge when clicked object
         {
             mRenderer.material.SetFloat("_Outline", 2);
             transform.localScale = transform.localScale * 1.5f;

@@ -3,10 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class PlayButton : MonoBehaviour, IPointerDownHandler
+namespace UI.Buttons
 {
-    public void OnPointerDown(PointerEventData eventData)
+    public class PlayButton : MonoBehaviour, IPointerDownHandler
     {
-        Managers.SceneChangeManager.ChangeScene(false);
+        public void OnPointerDown(PointerEventData eventData)
+        {
+            Managers.SceneChangeManager.ChangeScene(false);
+        }
     }
 }
