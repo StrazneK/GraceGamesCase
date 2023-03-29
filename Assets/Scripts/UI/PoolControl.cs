@@ -27,7 +27,7 @@ namespace UI
                 FillFoodpacksUIsList();
             for (int i = 0; i < collectedObjs.Count; i++)
             {
-                foodpackUIs[i].FillContent(collectedObjs[i]);
+                 foodpackUIs[i].FillContent(collectedObjs[i]);
             }
         }
         public GameObject FoundUI(FoodpackSO foodpackSO)

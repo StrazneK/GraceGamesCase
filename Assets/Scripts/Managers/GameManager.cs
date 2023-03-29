@@ -31,7 +31,6 @@ namespace Managers
         {
             ChangeGameState(false);
         }
-
         public enum GameState
         { 
             Pause,

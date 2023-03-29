@@ -144,7 +144,7 @@ Material:
     - _OcclusionStrength: 1
     - _Offset1: 0
     - _Offset2: 0
-    - _Outline: 0
+    - _Outline: 0.24
     - _OutlineLightingType: 0
     - _OutlineLightingTypeURP: 0
     - _OutlineMaxWidth: 1
@@ -159,7 +159,7 @@ Material:
     - _RampBandsSmoothing: 1
     - _RampOffset: 0
     - _RampScale: 1
-    - _RampSmooth: 0.1
+    - _RampSmooth: 0.316
     - _RampSmoothing: 1
     - _RampThreshold: 0.25
     - _RampType: 2
@@ -174,7 +174,7 @@ Material:
     - _SingleIndirectColor: 0
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _SpecSmooth: 0.05
+    - _SpecSmooth: 0.334
     - _SpecularHighlights: 1
     - _SpecularMapType: 0
     - _SpecularRoughness: 0.225

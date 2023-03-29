@@ -12,8 +12,8 @@ namespace Managers
         TextMeshProUGUI txtTime;
         bool stopTimer = false;
 
-        float freezeTimeValue = 15;
-        float addTimeValue = 15;
+        float freezeTimeValue = 8;
+        float addTimeValue = 10;
 
         public void StartTimer(float seconds) => leftTime = Time.deltaTime + seconds;
         public void StopTimer() => StartCoroutine(StopTimerCorout(freezeTimeValue));

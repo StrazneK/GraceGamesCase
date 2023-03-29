@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Managers;
 using Other;
+using System.Linq;
 
 namespace Foodpack
 {
@@ -32,7 +33,9 @@ namespace Foodpack
             Vector3 randomPosition = new Vector3(Random.Range(-MAX_X, MAX_X), 2, Random.Range(-MAX_Z, MAX_Z));
             Quaternion randomRotation = Quaternion.Euler(Random.Range(0, 360), Random.Range(0, 360), Random.Range(0, 360));
             GameObject newObj = Instantiate(foodpackSO.prefab, randomPosition, randomRotation, transform);
+
             newObj.GetComponent<FoodpackObj>().foodpackSO = foodpackSO;
+
             if (isRequired)
                 spawnedRequiredFp.Add(newObj);
             else

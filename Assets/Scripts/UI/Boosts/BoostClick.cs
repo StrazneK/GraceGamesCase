@@ -8,6 +8,8 @@ namespace UI.Boosts
     {
         public void OnPointerDown(PointerEventData eventData)
         {
+            if (!GameManager.Instance.IsGamePlaying())
+                return;
             StartBoost();
         }
         public abstract void StartBoost();

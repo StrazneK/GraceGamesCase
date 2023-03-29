@@ -17,6 +17,8 @@ namespace Foodpack
         }
         public void OnPointerDown(PointerEventData eventData) //Give yellow outline and enlarge when clicked object
         {
+            if (!Managers.GameManager.Instance.IsGamePlaying())
+                return;
             mRenderer.material.SetFloat("_Outline", 2);
             transform.localScale = transform.localScale * 1.5f;
             FoodpackAnimation.Instance.MoveForCollect(transform);

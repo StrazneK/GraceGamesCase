@@ -10,6 +10,14 @@ namespace Managers
     public class LevelManager : MonoSingleton<LevelManager>
     {
         int level;
+        private void OnEnable()
+        {
+            EventManager.AddHandler(GameEvent.OnGameWin, NextLevel);
+        }
+        private void OnDisable()
+        {
+            EventManager.RemoveHandler(GameEvent.OnGameWin, NextLevel);
+        }
 
         private void Start()
         {
